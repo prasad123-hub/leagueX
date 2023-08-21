@@ -15,7 +15,7 @@ export const FeedBackForm = () => {
   const form = useForm<CreateFeedback>();
 
   const onSubmit: SubmitHandler<CreateFeedback> = async (
-    data: CreateFeedback
+    data: CreateFeedback,
   ) => {
     setLoading(true);
     setTimeout(() => {
@@ -36,7 +36,7 @@ export const FeedBackForm = () => {
   return (
     <div>
       <Heading>Submit Your Feedback</Heading>
-      <div className="mt-10 border border-border rounded-md p-8">
+      <div className="mt-10 rounded-md border border-border p-8">
         <form
           onSubmit={(...args) => void form.handleSubmit(onSubmit)(...args)}
           className="space-y-8"
@@ -44,7 +44,7 @@ export const FeedBackForm = () => {
           <div>
             <label
               htmlFor="userName"
-              className="text-foreground text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="text-sm font-medium leading-none text-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               Enter Your Name
             </label>
@@ -65,7 +65,7 @@ export const FeedBackForm = () => {
           <div>
             <label
               htmlFor="userEmail"
-              className="text-foreground text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="text-sm font-medium leading-none text-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               Enter Your Email
             </label>
@@ -96,7 +96,7 @@ export const FeedBackForm = () => {
           <div>
             <label
               htmlFor="userFeedbackMessage"
-              className="text-foreground text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="text-sm font-medium leading-none text-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               Message
             </label>

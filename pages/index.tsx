@@ -9,8 +9,8 @@ export default function Home() {
   const { state } = useContext(UserDetailsContext);
   return (
     <>
-      <main className="bg-background min-h-screen overflow-y-hidden">
-        <div className="max-w-5xl mx-auto">
+      <main className="min-h-screen overflow-y-hidden bg-background">
+        <div className="mx-auto max-w-5xl">
           <Navbar />
           <div className="md:grid md:grid-cols-[2fr,1fr] md:gap-x-6">
             <div className="py-10">
@@ -22,7 +22,7 @@ export default function Home() {
                 height={500}
                 width={300}
                 alt="LeagueX_Banner_Image"
-                className="object-cover h-[95%] mt-2 rounded-xl opacity-80"
+                className="mt-2 h-[95%] rounded-xl object-cover opacity-80"
               />
             </div>
           </div>

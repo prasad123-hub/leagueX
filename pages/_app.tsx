@@ -9,9 +9,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <UserDetailsContextProvider>
       <main
         className={cn(
-          "min-h-screen bg-background font-sans antialiased px-6 lg:px-0",
+          "min-h-screen bg-background px-6 font-sans antialiased lg:px-0",
           fontSans.variable,
-          fontHeading.variable
+          fontHeading.variable,
         )}
       >
         <Component {...pageProps} />

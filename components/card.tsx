@@ -10,23 +10,23 @@ export const Card = () => {
         onClick={() => {
           dispatch({ type: "details/remove" });
         }}
-        className="inline-flex items-center bg-transparent border-none text-foreground text-sm font-semibold"
+        className="inline-flex items-center border-none bg-transparent text-sm font-semibold text-foreground"
       >
-        <LeftArrow /> <span className="inline-block ml-3">Back To Form</span>
+        <LeftArrow /> <span className="ml-3 inline-block">Back To Form</span>
       </button>
       <div className="mt-8">
         <Heading>Thank You For Your Feedback !</Heading>
       </div>
-      <div className="mt-8 border border-border rounded-md p-10">
+      <div className="mt-8 rounded-md border border-border p-10">
         <div className="border-b border-border pb-4">
-          <p className="text-foreground/80 italic text-md tracking-wider leading-relaxed">
+          <p className="text-md italic leading-relaxed tracking-wider text-foreground/80">
             {state.userFeedbackMessage}
           </p>
         </div>
-        <div className="flex items-center space-x-4 mt-4">
+        <div className="mt-4 flex items-center space-x-4">
           <Avatar name={state.userName} />
           <div>
-            <h6 className="text-lg text-foreground font-heading font-semibold">
+            <h6 className="font-heading text-lg font-semibold text-foreground">
               {state.userName}
             </h6>
             <p className="text-sm text-foreground/60">{state.userEmail}</p>
@@ -61,7 +61,7 @@ const Avatar = ({ name }: { name: string }) => {
   const initialLetter = name.split(" ")[0].charAt(0);
   return (
     <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-500">
-      <span className="font-medium leading-none text-white text-lg">
+      <span className="text-lg font-medium leading-none text-white">
         {initialLetter}
       </span>
     </span>
