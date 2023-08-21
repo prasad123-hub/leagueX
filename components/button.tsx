@@ -1,4 +1,17 @@
-import { useState } from "react";
+export const Button = () => {
+  return (
+    <button type="submit" className="flex cursor-pointer items-center">
+      <div className="relative">
+        <div className="relative ">
+          <div className="top_half before:bg-blue-500 after:bg-blue-600"> </div>
+          <div className="relative z-50 px-20 py-4 text-xl font-bold capitalize text-foreground">
+            Submit
+          </div>
+        </div>
+      </div>
+    </button>
+  );
+};
 
 export const ButtonLoader = () => {
   return (
@@ -20,20 +33,5 @@ export const ButtonLoader = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export const Button = () => {
-  return (
-    <button type="submit" className="flex cursor-pointer items-center">
-      <div className="relative">
-        <div className="relative ">
-          <div className="top_half before:bg-blue-500 after:bg-blue-600"> </div>
-          <div className="relative z-50 px-20 py-4 text-xl font-bold capitalize text-foreground">
-            Submit
-          </div>
-        </div>
-      </div>
-    </button>
   );
 };

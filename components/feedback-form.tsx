@@ -1,11 +1,11 @@
-import { CreateFeedback } from "@/lib/validator";
-import { Heading } from "./heading";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { Textarea } from "./textarea";
-import { Input } from "./input";
-import { Button, ButtonLoader } from "./button";
 import { useContext, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { UserDetailsContext } from "@/context/UserDetailsContext";
+import { CreateFeedback } from "@/lib/validator";
+import { Heading } from "@/components/heading";
+import { Textarea } from "@/components/textarea";
+import { Input } from "@/components/input";
+import { Button, ButtonLoader } from "@/components/button";
 
 export const FeedBackForm = () => {
   const [loading, setLoading] = useState(false);
@@ -30,8 +30,6 @@ export const FeedBackForm = () => {
       });
     }, 4000);
   };
-
-  console.log(state);
 
   return (
     <div>

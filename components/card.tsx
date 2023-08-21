@@ -1,6 +1,6 @@
-import { UserDetailsContext } from "@/context/UserDetailsContext";
 import React, { useContext } from "react";
-import { Heading } from "./heading";
+import { UserDetailsContext } from "@/context/UserDetailsContext";
+import { Heading } from "@/components/heading";
 
 export const Card = () => {
   const { state, dispatch } = useContext(UserDetailsContext);
